@@ -20,6 +20,17 @@ header {
     text-align: center;
     box-shadow: 0 2px 8px rgba(24,49,83,0.08);
 }
+.header-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.site-logo {
+    height: 50px; /* Ajuste la taille selon tes besoins */
+    width: auto;
+    border-radius: 8px; /* Optionnel : coins légèrement arrondis pour un look pro */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Optionnel : effet subtil d’ombre */
+}
 header nav ul {
     list-style: none;
     padding: 0;
