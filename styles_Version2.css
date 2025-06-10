@@ -19,6 +19,17 @@ header {
     padding: 1.5rem 0;
     text-align: center;
     box-shadow: 0 2px 8px rgba(24,49,83,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.a{
+   background: var(--bleu-fonce);
+    color: var(--blanc);
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(24,49,83,0.08);
+    display: none; 
 }
 .header-logo-title {
     display: flex;
@@ -34,7 +45,15 @@ header {
 header nav ul {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0 0;
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.a nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 0;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -45,7 +64,16 @@ header nav a {
     font-weight: bold;
     transition: color 0.2s;
 }
+.a nav a {
+    color: var(--blanc);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
 header nav a:hover {
+    color: var(--bleu-clair);
+}
+.a nav a:hover {
     color: var(--bleu-clair);
 }
 .hero {
@@ -264,11 +292,21 @@ footer {
         margin-top: 2rem;
     }
 }
-@media (max-width: 600px) {
-    .services, .projets, .avis, .apropos, .contact {
+@media (max-width: 900px) {
+        .services, .projets, .avis, .apropos, .contact {
         padding: 1.5rem 0.3rem;
     }
     .tab-content {
         padding: 1rem;
     }
+    .site-logo {
+    display: none;
 }
+header {
+    display: none;
+}
+.a{
+    display: block;
+}
+}
+    
