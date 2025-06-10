@@ -1,0 +1,263 @@
+:root {
+    --bleu-fonce: #183153;
+    --bleu-clair: #4f8cff;
+    --bleu-pale: #e3ecfc;
+    --bleu-accent: #2255a4;
+    --blanc: #fff;
+    --gris: #f9f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: var(--gris);
+    color: var(--bleu-fonce);
+}
+header {
+    background: var(--bleu-fonce);
+    color: var(--blanc);
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(24,49,83,0.08);
+}
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+header nav a {
+    color: var(--blanc);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+header nav a:hover {
+    color: var(--bleu-clair);
+}
+.hero {
+    background: linear-gradient(90deg, var(--bleu-fonce) 60%, var(--bleu-clair) 100%);
+    color: var(--blanc);
+    padding: 3rem 1rem;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.hero-text {
+    flex: 2;
+    min-width: 250px;
+}
+.hero-img img {
+    width: 340px;
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(70,129,255,0.13);
+}
+.cta-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: var(--bleu-clair);
+    color: var(--blanc);
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 1.1rem;
+}
+.cta-btn:hover {
+    background: var(--blanc);
+    color: var(--bleu-fonce);
+}
+.services {
+    padding: 3rem 1rem;
+    background: var(--bleu-pale);
+    text-align: center;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.tab-btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    background: var(--bleu-clair);
+    color: var(--blanc);
+    font-weight: bold;
+    border-radius: 3px 3px 0 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1rem;
+}
+.tab-btn.active, .tab-btn:hover {
+    background: var(--bleu-fonce);
+    color: var(--blanc);
+}
+.tab-content {
+    display: none;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--blanc);
+    padding: 2rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(70,129,255,0.05);
+}
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.service-img {
+    width: 100%;
+    max-width: 360px;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(24,49,83,0.11);
+}
+.projets {
+    background: var(--blanc);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+.projets-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.projet-card {
+    background: var(--bleu-pale);
+    border-radius: 9px;
+    box-shadow: 0 2px 12px rgba(70,129,255,0.08);
+    padding: 1.5rem;
+    max-width: 340px;
+    flex: 1 1 300px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+.projet-card:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+.projet-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.projet-card h4 {
+    margin-top: 0;
+    color: var(--bleu-accent);
+}
+.avis {
+    background: var(--bleu-clair);
+    color: var(--blanc);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+.avis-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.avis-card {
+    background: var(--blanc);
+    color: var(--bleu-fonce);
+    border-radius: 11px;
+    box-shadow: 0 2px 12px rgba(70,129,255,0.10);
+    padding: 1.5rem 1.2rem;
+    max-width: 330px;
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avis-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--bleu-clair);
+}
+.avis-card p {
+    font-style: italic;
+    margin: 0 0 1rem 0;
+}
+.avis-card span {
+    font-weight: bold;
+    color: var(--bleu-accent);
+}
+.apropos, .contact {
+    padding: 3rem 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--blanc);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(24,49,83,0.06);
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact input, .contact textarea {
+    padding: 0.8rem;
+    border-radius: 3px;
+    border: 1px solid #b9d3f4;
+    font-size: 1rem;
+}
+.contact button {
+    padding: 1rem;
+    background: var(--bleu-fonce);
+    color: var(--blanc);
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact button:hover {
+    background: var(--bleu-clair);
+    color: var(--bleu-fonce);
+}
+footer {
+    background: var(--bleu-fonce);
+    color: var(--blanc);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+}
+@media (max-width: 900px) {
+    .hero-content, .projets-grid, .avis-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-img img {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 600px) {
+    .services, .projets, .avis, .apropos, .contact {
+        padding: 1.5rem 0.3rem;
+    }
+    .tab-content {
+        padding: 1rem;
+    }
+}
